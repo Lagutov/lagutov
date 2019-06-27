@@ -1,0 +1,194 @@
+\hypertarget{classmodAlphaCipher}{}\section{Класс mod\+Alpha\+Cipher}
+\label{classmodAlphaCipher}\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+
+
+Шифрование методом Гронсфельда  
+
+
+
+
+{\ttfamily \#include $<$mod\+Alpha\+Cipher.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}{mod\+Alpha\+Cipher} ()=delete
+\begin{DoxyCompactList}\small\item\em Конструктор без параметров \end{DoxyCompactList}\item 
+\hyperlink{classmodAlphaCipher_a76a420025b3c08f72c9b996d83c6ff09}{mod\+Alpha\+Cipher} (const std\+::string \&skey)
+\begin{DoxyCompactList}\small\item\em Конструктор для установки ключа \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classmodAlphaCipher_ab855d6b2ba63a70d84abc8b15700da63}{encrypt} (const std\+::string \&open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Зашифровывание \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classmodAlphaCipher_af1f0fa8ec93df56aa7657494de2a3f00}{decrypt} (const std\+::string \&cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Расшифровывание \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classmodAlphaCipher_ad8496ce022685d8262b1f26f4b993de3}{towstr} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Перевод из кодировки U\+T\+F-\/8 в U\+T\+F-\/32. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classmodAlphaCipher_aa0319b273a77c5ac7ea5407e7534e1c6}{fromwstr} (const std\+::wstring \&ws)
+\begin{DoxyCompactList}\small\item\em Перевод из кодировки U\+T\+F-\/32 в U\+T\+F-\/8. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Шифрование методом Гронсфельда 
+
+Ключ устанавливается в конструкторе.\+Для зашифровывания и расшифровывания предназначены методы encrypt и decrypt. \begin{DoxyWarning}{Предупреждения}
+Реализация только для русского языка 
+\end{DoxyWarning}
+
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}\label{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}} 
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\subsubsection{\texorpdfstring{mod\+Alpha\+Cipher()}{modAlphaCipher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mod\+Alpha\+Cipher\+::mod\+Alpha\+Cipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Конструктор без параметров 
+
+Запрещен \mbox{\Hypertarget{classmodAlphaCipher_a76a420025b3c08f72c9b996d83c6ff09}\label{classmodAlphaCipher_a76a420025b3c08f72c9b996d83c6ff09}} 
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\subsubsection{\texorpdfstring{mod\+Alpha\+Cipher()}{modAlphaCipher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mod\+Alpha\+Cipher\+::mod\+Alpha\+Cipher (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{skey }\end{DoxyParamCaption})}
+
+
+
+Конструктор для установки ключа 
+
+Перевод из кодировки U\+T\+F-\/32 в U\+T\+F-\/8.
+
+Ключ проверяется на валидность. Переводится в кодировку U\+T\+F-\/32. Формируется вектор-\/ключ. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em skey} & Ключ в кодировке U\+T\+F-\/8 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error}} & ключ вырожденный\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em s} & Строка в кодировке U\+T\+F-\/32 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка в кодировке U\+T\+F-\/8 
+\end{DoxyReturn}
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classmodAlphaCipher_af1f0fa8ec93df56aa7657494de2a3f00}\label{classmodAlphaCipher_af1f0fa8ec93df56aa7657494de2a3f00}} 
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\subsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::string mod\+Alpha\+Cipher\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cipher\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Расшифровывание 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em cipher\+\_\+text} & Зашифрованный текст в кодировке U\+T\+F-\/8. Не должен быть пустой строкой. Не должен содержать строчные символы и не-\/буквы. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Расифрованная строка в кодировке U\+T\+F-\/8 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error}} & текст пустой\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em cipher\+\_\+text} & Зашифрованный текст в кодировке U\+T\+F-\/8. Не должен быть пустой строкой. Не должен содержать строчные символы и небуквы. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Расифрованная строка в кодировке U\+T\+F-\/8 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error}} & текст пустой \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmodAlphaCipher_ab855d6b2ba63a70d84abc8b15700da63}\label{classmodAlphaCipher_ab855d6b2ba63a70d84abc8b15700da63}} 
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\subsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::string mod\+Alpha\+Cipher\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Зашифровывание 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em open\+\_\+text} & Открытый текст в кодировке U\+T\+F-\/8. Не должен быть пустой строкой. Строчные символы автоматически преобразуются к прописным.\+Все не-\/буквы удаляются. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованная строка в кодировке U\+T\+F-\/8 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error}} & текст пустой\\
+\hline
+\end{DoxyExceptions}
+11$\ast$ 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em open\+\_\+text} & Открытый текст. Не должен быть пустой строкой. Строчные символы автоматически преобразуются к прописным. Все не-\/буквы удаляются \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованная строка 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error},если} & текст пустой \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmodAlphaCipher_aa0319b273a77c5ac7ea5407e7534e1c6}\label{classmodAlphaCipher_aa0319b273a77c5ac7ea5407e7534e1c6}} 
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!fromwstr@{fromwstr}}
+\index{fromwstr@{fromwstr}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\subsubsection{\texorpdfstring{fromwstr()}{fromwstr()}}
+{\footnotesize\ttfamily std\+::string mod\+Alpha\+Cipher\+::fromwstr (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{ws }\end{DoxyParamCaption})}
+
+
+
+Перевод из кодировки U\+T\+F-\/32 в U\+T\+F-\/8. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em s} & Строка в кодировке U\+T\+F-\/32 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка в кодировке U\+T\+F-\/8 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodAlphaCipher_ad8496ce022685d8262b1f26f4b993de3}\label{classmodAlphaCipher_ad8496ce022685d8262b1f26f4b993de3}} 
+\index{mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}!towstr@{towstr}}
+\index{towstr@{towstr}!mod\+Alpha\+Cipher@{mod\+Alpha\+Cipher}}
+\subsubsection{\texorpdfstring{towstr()}{towstr()}}
+{\footnotesize\ttfamily std\+::wstring mod\+Alpha\+Cipher\+::towstr (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Перевод из кодировки U\+T\+F-\/8 в U\+T\+F-\/32. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em s} & Строка в кодировке U\+T\+F-\/8 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка в кодировке U\+T\+F-\/32 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{modAlphaCipher_8h}{mod\+Alpha\+Cipher.\+h}\item 
+\hyperlink{modAlphaCipher_8cpp}{mod\+Alpha\+Cipher.\+cpp}\end{DoxyCompactItemize}
